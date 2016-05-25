@@ -1,0 +1,171 @@
+-debug
+-target:library
+-nowarn:0169
+-out:'Temp/Assembly-CSharp.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
+-r:'Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
+-r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
+-r:'/Applications/Unity/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll'
+-define:UNITY_5_3_3
+-define:UNITY_5_3
+-define:UNITY_5
+-define:ENABLE_NEW_BUGREPORTER
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_FRAME_DEBUGGER
+-define:ENABLE_GENERICS
+-define:ENABLE_HOME_SCREEN
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_LIGHT_PROBES_LEGACY
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_PLUGIN_INSPECTOR
+-define:ENABLE_SHADOWS
+-define:ENABLE_SINGLE_INSTANCE_BUILD_SETTING
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_SPRITE_POLYGON
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_VR
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:INCLUDE_IL2CPP
+-define:INCLUDE_DIRECTX12
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:ENABLE_LOCALIZATION
+-define:ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION
+-define:ENABLE_EDITOR_TESTS_RUNNER
+-define:UNITY_STANDALONE_OSX
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_GAMECENTER
+-define:ENABLE_TEXTUREID_MAP
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_LOG_MIXED_STACKTRACE
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_OSX
+-define:CROSS_PLATFORM_INPUT
+'Assets/Black Hole/Script/BlackHoleRenderer.cs'
+'Assets/GalaxyBox1/examplescene.cs'
+'Assets/MazeGenerator/Scripts/BasicMazeGenerator.cs'
+'Assets/MazeGenerator/Scripts/DivisionMazeGenerator.cs'
+'Assets/MazeGenerator/Scripts/MazeCell.cs'
+'Assets/MazeGenerator/Scripts/MazeSpawner.cs'
+'Assets/MazeGenerator/Scripts/OldestTreeMazeGenerator.cs'
+'Assets/MazeGenerator/Scripts/RandomTreeMazeGenerator.cs'
+'Assets/MazeGenerator/Scripts/RecursiveMazeGenerator.cs'
+'Assets/MazeGenerator/Scripts/RecursiveTreeMazeGenerator.cs'
+'Assets/MazeGenerator/Scripts/RollerBall.cs'
+'Assets/MazeGenerator/Scripts/TreeMazeGenerator.cs'
+'Assets/MyScript/TerrainCtrl.cs'
+'Assets/MyScript/lightMove.cs'
+'Assets/MyScript/myVis.cs'
+'Assets/SampleScenes/Menu/Scripts/MenuSceneLoader.cs'
+'Assets/SampleScenes/Menu/Scripts/PauseMenu.cs'
+'Assets/SampleScenes/Menu/Scripts/ReturnToMainMenu.cs'
+'Assets/SampleScenes/Menu/Scripts/SceneAndURLLoader.cs'
+'Assets/SampleScenes/Scripts/CameraSwitch.cs'
+'Assets/SampleScenes/Scripts/LevelReset.cs'
+'Assets/SampleScenes/Scripts/ParticleSceneControls.cs'
+'Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs'
+'Assets/SampleScenes/Scripts/SlowMoButton.cs'
+'Assets/TBS Framework/Scripts/Core/AStarPathfinding.cs'
+'Assets/TBS Framework/Scripts/Core/BreadthFirstSearch.cs'
+'Assets/TBS Framework/Scripts/Core/Buff.cs'
+'Assets/TBS Framework/Scripts/Core/Cell.cs'
+'Assets/TBS Framework/Scripts/Core/CellGrid.cs'
+'Assets/TBS Framework/Scripts/Core/CellGridState.cs'
+'Assets/TBS Framework/Scripts/Core/CellGridStateAiTurn.cs'
+'Assets/TBS Framework/Scripts/Core/CellGridStateGameOver.cs'
+'Assets/TBS Framework/Scripts/Core/CellGridStateTurnChanging.cs'
+'Assets/TBS Framework/Scripts/Core/CellGridStateUnitSelected.cs'
+'Assets/TBS Framework/Scripts/Core/CellGridStateWaitingForInput.cs'
+'Assets/TBS Framework/Scripts/Core/CustomObstacleGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/CustomUnitGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/DijkstraPathfinding.cs'
+'Assets/TBS Framework/Scripts/Core/EquilateralHexGridGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/GreedyBestFirstSearch.cs'
+'Assets/TBS Framework/Scripts/Core/HeapPriorityQueue.cs'
+'Assets/TBS Framework/Scripts/Core/Hexagon.cs'
+'Assets/TBS Framework/Scripts/Core/HexagonalHexGridGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/HumanPlayer.cs'
+'Assets/TBS Framework/Scripts/Core/ICellGridGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/IGraphNode.cs'
+'Assets/TBS Framework/Scripts/Core/IPathfinding.cs'
+'Assets/TBS Framework/Scripts/Core/IPriorityQueue.cs'
+'Assets/TBS Framework/Scripts/Core/IUnitGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/ListPriorityQueue.cs'
+'Assets/TBS Framework/Scripts/Core/NaiveAiPlayer.cs'
+'Assets/TBS Framework/Scripts/Core/Player.cs'
+'Assets/TBS Framework/Scripts/Core/RandomUnitGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/RectangularHexGridGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/RectangularSquareGridGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/Square.cs'
+'Assets/TBS Framework/Scripts/Core/TriangularHexGridGenerator.cs'
+'Assets/TBS Framework/Scripts/Core/Unit.cs'
+'Assets/TBS Framework/Scripts/Core/UnitState.cs'
+'Assets/TBS Framework/Scripts/Core/UnitStateMarkedAsFinished.cs'
+'Assets/TBS Framework/Scripts/Core/UnitStateMarkedAsFriendly.cs'
+'Assets/TBS Framework/Scripts/Core/UnitStateMarkedAsReachableEnemy.cs'
+'Assets/TBS Framework/Scripts/Core/UnitStateMarkedAsSelected.cs'
+'Assets/TBS Framework/Scripts/Core/UnitStateNormal.cs'
+'Assets/TBS Framework/Scripts/Example1/Archer.cs'
+'Assets/TBS Framework/Scripts/Example1/AttackBuff.cs'
+'Assets/TBS Framework/Scripts/Example1/BuffSpawner.cs'
+'Assets/TBS Framework/Scripts/Example1/DefenceBuff.cs'
+'Assets/TBS Framework/Scripts/Example1/GuiController.cs'
+'Assets/TBS Framework/Scripts/Example1/HealingBuff.cs'
+'Assets/TBS Framework/Scripts/Example1/Hero.cs'
+'Assets/TBS Framework/Scripts/Example1/MyHexagon.cs'
+'Assets/TBS Framework/Scripts/Example1/MyUnit.cs'
+'Assets/TBS Framework/Scripts/Example1/Paladin.cs'
+'Assets/TBS Framework/Scripts/Example1/RandomObstacleGenerator.cs'
+'Assets/TBS Framework/Scripts/Example1/Spearman.cs'
+'Assets/TBS Framework/Scripts/Example2/Alien.cs'
+'Assets/TBS Framework/Scripts/Example2/FlyingAlien.cs'
+'Assets/TBS Framework/Scripts/Example2/MyOtherHexagon.cs'
+'Assets/TBS Framework/Scripts/Example2/OtherGuiController.cs'
+'Assets/TBS Framework/Scripts/Example3/GenericUnit.cs'
+'Assets/TBS Framework/Scripts/Example3/MySquare.cs'
+'Assets/TBS Framework/Scripts/Example3/NextGuiController.cs'
+'Assets/TBS Framework/Scripts/Tutorial/GUIController.cs'
+'Assets/TBS Framework/Scripts/Tutorial/SampleSquare.cs'
+'Assets/TBS Framework/Scripts/Tutorial/SampleUnit.cs'
+'Assets/waterSize.cs'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/2.0/System.Runtime.Serialization.dll'
+-r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/2.0/System.Xml.Linq.dll'

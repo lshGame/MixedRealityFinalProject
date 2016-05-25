@@ -172,10 +172,18 @@ public class myVis : MonoBehaviour {
 	public bool isWall;
 	public Material sky;
 	public float RotationPerSecond;
+	//public AudioSource AS;
 	void Update () {
 		//openRadius = Radius;
 
 		/*while Playing*/
+		if (platformEnabled) {
+			myAudio.clip = Microphone.Start ("Built-in Microphone", true, 100, 44100);
+			//if (Microphone.IsRecording("Steinberg CI1"))
+			//	Debug.Log ("yes");
+			myAudio.pitch = 0.5f;
+			myAudio.Play ();
+		}
 		if (myAudio.isPlaying) {
 			offset = 0;
 			spectrum = myAudio.GetComponent<AudioSource> ().GetSpectrumData (1024, 0, FFTWindow.Hamming);
@@ -183,16 +191,19 @@ public class myVis : MonoBehaviour {
 			for (i = 0; i < hex.Length; i++) {
 				previousScale = hex [i].transform.localScale;
 				lerp = Mathf.Lerp (previousScale.z, spectrum [i] * changScale, Time.deltaTime * changSpeed);
-				degr = hex [i].transform.gameObject.GetComponent<Hexagon> ().degree;
-				avr = avrOffset (hex [i], lerp);
-				offset = (platformEnabled) ? (avr * 18f /(Mathf.Sqrt (degr))) : (2f * avr);
-				//Debug.Log (offset+"  "+i);
-				if (degr != 10 && degr != 5)
-					previousScale.z = offset + lerp;
-				else
-					previousScale.z = 1.2f * offset + lerp;
-				if (!float.IsNaN (previousScale.z))
-					hex [i].transform.localScale = previousScale; 
+				//Debug.Log (lerp);
+				if (lerp >= 0.0000001) {
+					degr = hex [i].transform.gameObject.GetComponent<Hexagon> ().degree;
+					avr = avrOffset (hex [i], lerp);
+					offset = (platformEnabled) ? (avr * 18f / (Mathf.Sqrt (degr))) : (2f * avr);
+					//Debug.Log (offset+"  "+i);
+					if (degr != 10 && degr != 5)
+						previousScale.z = offset + lerp;
+					else
+						previousScale.z = 1.2f * offset + lerp;
+					if (!float.IsNaN (previousScale.z))
+						hex [i].transform.localScale = previousScale; 
+				}
 				//hex.transform.gameObject.GetComponent<Hexagon> ().record.Add (lerp);
 				//equalizer
 				/*
