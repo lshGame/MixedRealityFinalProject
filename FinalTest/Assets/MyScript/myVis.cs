@@ -111,7 +111,10 @@ public class myVis : MonoBehaviour {
 		myAudio.pitch = 0.5f;
 		myAudio.Play();
 		*/
-
+		int min;
+		int max;
+		Microphone.GetDeviceCaps ("Steinberg CI1", out min,out max);
+		Debug.Log (min + " " + max);
 		MyGenerateHex (innerRadius,Radius);
 
 		if (platformEnabled) {
@@ -178,11 +181,13 @@ public class myVis : MonoBehaviour {
 
 		/*while Playing*/
 		if (platformEnabled) {
+			
 			myAudio.clip = Microphone.Start ("Built-in Microphone", true, 100, 44100);
 			//if (Microphone.IsRecording("Steinberg CI1"))
 			//	Debug.Log ("yes");
 			myAudio.pitch = 0.5f;
 			myAudio.Play ();
+			//myAudio.mute = true;
 		}
 		if (myAudio.isPlaying) {
 			offset = 0;
@@ -190,12 +195,14 @@ public class myVis : MonoBehaviour {
 			hex = hexagons.ToArray ();
 			for (i = 0; i < hex.Length; i++) {
 				previousScale = hex [i].transform.localScale;
-				lerp = Mathf.Lerp (previousScale.z, spectrum [i] * changScale, Time.deltaTime * changSpeed);
+				lerp = Mathf.Lerp (previousScale.z, spectrum [i+1] * changScale, Time.deltaTime * changSpeed);
 				//Debug.Log (lerp);
 				if (lerp >= 0.0000001) {
+				//if (true) {
 					degr = hex [i].transform.gameObject.GetComponent<Hexagon> ().degree;
 					avr = avrOffset (hex [i], lerp);
-					offset = (platformEnabled) ? (avr * 18f / (Mathf.Sqrt (degr))) : (2f * avr);
+					offset = (platformEnabled) ? (avr *50f / (Mathf.Sqrt (degr))) : (5f * avr);
+					offset = (degr == 0) ? offset + 1 : offset;
 					//Debug.Log (offset+"  "+i);
 					if (degr != 10 && degr != 5)
 						previousScale.z = offset + lerp;
@@ -261,10 +268,10 @@ public class myVis : MonoBehaviour {
 
 			//prevLocationEuler+=rotAngle*Time.deltaTime;
 			prevLocationEuler += rotAngle*Time.deltaTime;
-			if (prevLocationEuler.x >= 90 || prevLocationEuler.y <= -90) {
+			if (prevLocationEuler.x >= 90 || prevLocationEuler.x <= -90) {
 				
 				//Vector3 tmpVec = prevRotation.eulerAngles;
-				prevLocationEuler.x = 0;
+				prevLocationEuler.x = -prevLocationEuler.x;
 				//prevRotation.eulerAngles = tmpVec;
 
 			}
